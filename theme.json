@@ -1,0 +1,12 @@
+{
+  "colors": {
+    "astraYellow": "#FFC800",
+    "astraBlack": "#050505",
+    "white": "#ffffff",
+    "black": "#000000"
+  },
+  "fontFamily": {
+    "montserrat": ["Montserrat", "sans-serif"],
+    "poppins": ["Poppins", "sans-serif"]
+  }
+}
