@@ -16,10 +16,10 @@
     <div class="grid md:grid-cols-3 gap-8">
       <div class="p-6 bg-white border border-gray-300 rounded-lg shadow-sm">
         <h3 class="font-poppins text-lg font-semibold text-astraBlack mb-1">
-          Devendra Saindevis
+          Devendra Saindavise
         </h3>
         <p class="font-montserrat text-gray-700 text-sm mb-2">
-          Program Lead and Founder, Travel De Gama
+          Founder and Director, Travel De Gama
         </p>
         <p class="font-montserrat text-gray-700 text-sm">
           📞 +91 99705 52916<br />
@@ -29,10 +29,10 @@
 
       <div class="p-6 bg-white border border-gray-300 rounded-lg shadow-sm">
         <h3 class="font-poppins text-lg font-semibold text-astraBlack mb-1">
-          Manjunath Patil
+          Manjunath Prabhu
         </h3>
         <p class="font-montserrat text-gray-700 text-sm mb-2">
-          Program Coordination and School Relations
+          Founder and Director, Travel De Gama
         </p>
         <p class="font-montserrat text-gray-700 text-sm">
           📞 +91 96198 88166<br />
