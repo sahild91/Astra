@@ -2,11 +2,7 @@
   export let id: string = "Parents";
 </script>
 
-<section {id} class="relative py-24 px-6 md:px-16 bg-gradient-to-bl from-black to-gray-900 text-white overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute top-10 left-10 w-80 h-80 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-10 right-10 w-64 h-64 bg-green-500 opacity-5 rounded-full blur-3xl"></div>
-
+<section {id} class="relative py-24 px-6 md:px-16 text-white overflow-hidden">
   <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
     <!-- Right: Main Content -->
     <div class="md:w-3/5 order-1 md:order-2">
@@ -21,7 +17,7 @@
       </p>
 
       <div class="space-y-6">
-        <div class="bg-white/5 border border-gray-700 rounded-lg p-6 backdrop-blur-sm">
+        <div class="bg-white/5 border border-gray-800 rounded-lg p-6 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
           <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-3">What your child gains</h3>
           <ul class="list-disc list-inside font-montserrat text-sm text-gray-300 space-y-2">
             <li>Guided exposure to advanced space science and settlement concepts.</li>
@@ -35,7 +31,7 @@
 
     <!-- Left: How it works -->
     <div class="md:w-2/5 order-2 md:order-1">
-      <div class="bg-white/5 border border-gray-700 rounded-lg p-6 backdrop-blur-sm">
+      <div class="bg-white/5 border border-gray-800 rounded-lg p-6 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
         <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-3">How the program is structured</h3>
         <ul class="list-disc list-inside font-montserrat text-sm text-gray-300 space-y-2">
           <li>Clearly defined modules with regular checkpoints and mentor feedback.</li>

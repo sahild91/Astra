@@ -3,11 +3,7 @@
     import Constellations from "../../lib/Constellations.svelte";
 </script>
 
-<section id={id} class="relative py-24 px-6 md:px-16 bg-gradient-to-bl from-black to-gray-900 text-white overflow-hidden">    
-    <!-- Background decoration -->
-    <div class="absolute top-20 left-20 w-72 h-72 bg-purple-500 opacity-5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-20 right-20 w-56 h-56 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
-    
+<section id={id} class="relative py-24 px-6 md:px-16 text-white overflow-hidden">    
     <Constellations />
     
     <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -42,7 +38,7 @@
         <!-- Timeline (Left side) -->
         <div class="md:w-2/5 order-2 md:order-1">
             <div class="grid gap-4 text-sm font-montserrat text-gray-300">
-                <div class="bg-white/5 border border-gray-700 rounded-lg p-4 backdrop-blur-sm">
+                <div class="bg-white/5 border border-gray-800 rounded-lg p-4 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-astraYellow mb-1">
                         1982
                     </h3>
@@ -51,7 +47,7 @@
                         development.
                     </p>
                 </div>
-                <div class="bg-white/5 border border-gray-700 rounded-lg p-4 backdrop-blur-sm">
+                <div class="bg-white/5 border border-gray-800 rounded-lg p-4 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-astraYellow mb-1">
                         1994
                     </h3>
@@ -60,7 +56,7 @@
                         Settlement Contest with a small cohort of teams.
                     </p>
                 </div>
-                <div class="bg-white/5 border border-gray-700 rounded-lg p-4 backdrop-blur-sm">
+                <div class="bg-white/5 border border-gray-800 rounded-lg p-4 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-astraYellow mb-1">
                         2000s
                     </h3>
@@ -69,7 +65,7 @@
                         habitat designs submitted annually.
                     </p>
                 </div>
-                <div class="bg-white/5 border border-gray-700 rounded-lg p-4 backdrop-blur-sm">
+                <div class="bg-white/5 border border-gray-800 rounded-lg p-4 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-astraYellow mb-1">
                         Today
                     </h3>

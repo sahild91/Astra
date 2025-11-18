@@ -94,24 +94,20 @@
   });
 </script>
 
-<section {id} class="relative py-24 px-6 md:px-16 bg-gradient-to-bl from-black to-gray-900 text-white overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute top-10 left-10 w-72 h-72 bg-green-500 opacity-5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-10 right-10 w-80 h-80 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
-
+<section {id} class="relative py-16 md:py-24 px-6 md:px-16 text-white overflow-hidden">
   <div class="relative max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-astraYellow mb-6 text-center md:text-left">
       Learning Outcomes
     </h2>
 
-    <p class="text-gray-300 font-montserrat mb-12 text-center md:text-left max-w-3xl">
+    <p class="text-gray-300 font-montserrat mb-8 md:mb-12 text-center md:text-left max-w-3xl">
       The curriculum is designed to strengthen both disciplinary understanding and 21st-century competencies.
       Growth is mapped using research-based frameworks such as Marzano and SOLO taxonomy.
     </p>
 
-    <div class="flex flex-col md:flex-row items-start gap-12">
-      <!-- Left: Interactive Competencies -->
-      <div class="md:w-2/5 order-2 md:order-1">
+    <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12">
+      <!-- Mobile: Details first, Desktop: Competencies first -->
+      <div class="w-full md:w-2/5 order-1">
         <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-4">
           Competencies Tracked
         </h3>
@@ -129,7 +125,7 @@
               on:blur={handleLeave}
               on:keydown={(e) => e.key === 'Enter' && handleHover(index)}
               class="bg-white/5 border rounded-lg p-4 backdrop-blur-sm transition-all duration-500 cursor-pointer
-                {selectedIndex === index ? 'border-astraYellow bg-astraYellow/10 scale-105' : 'border-gray-700 hover:border-gray-600'}"
+                {selectedIndex === index ? 'border-astraYellow bg-astraYellow/10 scale-105' : 'border-gray-800 hover:border-gray-700'}"
             >
               <span class={selectedIndex === index ? 'text-astraYellow font-semibold' : 'text-gray-300'}>
                 {competency.name}
@@ -139,24 +135,24 @@
         </div>
       </div>
 
-      <!-- Right: Competency Details -->
-      <div class="md:w-3/5 order-1 md:order-2">
-        <div class="bg-white/5 border border-gray-700 rounded-lg p-8 backdrop-blur-sm min-h-[400px]">
+      <!-- Competency Details -->
+      <div class="w-full md:w-3/5 order-2">
+        <div class="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-astraYellow rounded-lg p-6 md:p-8 backdrop-blur-sm min-h-[350px] md:min-h-[400px] overflow-hidden">
           {#key selectedIndex}
-            <div class="animate-fadeIn">
-              <h3 class="font-poppins font-semibold text-2xl text-astraYellow mb-4">
+            <div class="animate-fadeIn relative z-10">
+              <h3 class="font-poppins font-semibold text-xl md:text-2xl text-astraYellow mb-3 md:mb-4">
                 {selectedCompetency.name}
               </h3>
-              <p class="font-montserrat text-gray-300 mb-6 leading-relaxed">
+              <p class="font-montserrat text-white mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                 {selectedCompetency.description}
               </p>
-              <h4 class="font-poppins font-semibold text-lg text-astraYellow mb-3">
+              <h4 class="font-poppins font-semibold text-base md:text-lg text-astraYellow mb-3">
                 Key Skills
               </h4>
-              <ul class="space-y-3 font-montserrat text-gray-300 text-sm">
+              <ul class="space-y-2 md:space-y-3 font-montserrat text-white text-xs md:text-sm">
                 {#each selectedCompetency.details as detail}
                   <li class="flex items-start gap-3">
-                    <span class="text-astraYellow mt-1">✓</span>
+                    <span class="text-astraYellow mt-1 font-bold">✓</span>
                     <span>{detail}</span>
                   </li>
                 {/each}

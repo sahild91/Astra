@@ -4,7 +4,7 @@
 
 <section
   id={id}
-  class="relative py-24 px-6 md:px-16 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden"
+  class="relative py-24 px-6 md:px-16 text-white overflow-hidden"
 >
   <!-- Pulsing Glow Halo Background -->
   <div
@@ -13,10 +13,6 @@
   >
     <div class="halo"></div>
   </div>
-
-  <!-- Background decoration -->
-  <div class="absolute top-10 left-10 w-72 h-72 bg-purple-500 opacity-5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-10 right-10 w-64 h-64 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
 
   <!-- Impact Content -->
   <div class="relative z-10 max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
@@ -41,19 +37,19 @@
     </div>
 
     <!-- Right: Stats Visual -->
-    <div class="md:w-2/5 order-2 flex items-center justify-center">
-      <div class="grid grid-cols-2 gap-6 w-full">
-        <div class="bg-white/5 border border-astraYellow/30 rounded-lg p-6 text-center backdrop-blur-sm">
-          <div class="text-3xl font-poppins font-bold text-astraYellow mb-1">30K+</div>
-          <div class="text-gray-400 font-montserrat text-xs">Students Mentored</div>
+    <div class="w-full md:w-2/5 order-2 flex items-center justify-center">
+      <div class="grid grid-cols-2 gap-4 md:gap-6 w-full max-w-md">
+        <div class="bg-astraYellow/15 border border-astraYellow/40 rounded-lg p-4 md:p-6 text-center backdrop-blur-sm hover:bg-astraYellow/20 transition-colors">
+          <div class="text-2xl md:text-3xl font-poppins font-bold text-white mb-1">30K+</div>
+          <div class="text-gray-200 font-montserrat text-xs">Students Mentored</div>
         </div>
-        <div class="bg-white/5 border border-astraYellow/30 rounded-lg p-6 text-center backdrop-blur-sm">
-          <div class="text-3xl font-poppins font-bold text-astraYellow mb-1">9+</div>
-          <div class="text-gray-400 font-montserrat text-xs">Years Experience</div>
+        <div class="bg-astraYellow/15 border border-astraYellow/40 rounded-lg p-4 md:p-6 text-center backdrop-blur-sm hover:bg-astraYellow/20 transition-colors">
+          <div class="text-2xl md:text-3xl font-poppins font-bold text-white mb-1">9+</div>
+          <div class="text-gray-200 font-montserrat text-xs">Years Experience</div>
         </div>
-        <div class="bg-white/5 border border-astraYellow/30 rounded-lg p-6 text-center backdrop-blur-sm col-span-2">
-          <div class="text-3xl font-poppins font-bold text-astraYellow mb-1">Global</div>
-          <div class="text-gray-400 font-montserrat text-xs">Recognition & Visibility</div>
+        <div class="bg-astraYellow/15 border border-astraYellow/40 rounded-lg p-4 md:p-6 text-center backdrop-blur-sm col-span-2 hover:bg-astraYellow/20 transition-colors">
+          <div class="text-2xl md:text-3xl font-poppins font-bold text-white mb-1">Global</div>
+          <div class="text-gray-200 font-montserrat text-xs">Recognition & Visibility</div>
         </div>
       </div>
     </div>
@@ -66,8 +62,8 @@
     width: 600px;
     height: 600px;
     border-radius: 9999px;
-    background: rgb(255, 204, 0); /* astraYellow */
-    opacity: 0.12;
+    background: rgb(255, 204, 0);
+    opacity: 0.05;
     filter: blur(180px);
     animation: pulseGlow 6s ease-in-out infinite;
   }
@@ -75,15 +71,15 @@
   @keyframes pulseGlow {
     0% {
       transform: scale(1);
-      opacity: 0.12;
+      opacity: 0.05;
     }
     50% {
       transform: scale(1.25);
-      opacity: 0.18;
+      opacity: 0.08;
     }
     100% {
       transform: scale(1);
-      opacity: 0.12;
+      opacity: 0.05;
     }
   }
 </style>

@@ -2,11 +2,7 @@
     export let id: string = "Program";
 </script>
 
-<section {id} class="relative py-24 px-6 md:px-16 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
-    <!-- Background decoration -->
-    <div class="absolute top-10 right-10 w-80 h-80 bg-blue-500 opacity-5 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-10 left-10 w-64 h-64 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
-
+<section {id} class="relative py-24 px-6 md:px-16 text-white overflow-hidden">
     <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
         <!-- Left: Content -->
         <div class="md:w-3/5 order-1">
@@ -23,7 +19,7 @@
             </p>
 
             <div class="grid md:grid-cols-2 gap-6 mb-10">
-                <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
                         Phase 1
                     </h3>
@@ -33,7 +29,7 @@
                         area for their project.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
                         Phase 2
                     </h3>
@@ -43,7 +39,7 @@
                         mentor feedback.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
                         Phase 3
                     </h3>
@@ -53,7 +49,7 @@
                         human factors.
                     </p>
                 </div>
-                <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                     <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
                         Phase 4 &amp; 5
                     </h3>
@@ -68,7 +64,7 @@
 
         <!-- Right: Additional Info -->
         <div class="md:w-2/5 order-2 space-y-6">
-            <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+            <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                 <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-2">
                     Student Kit and Support
                 </h3>
@@ -80,7 +76,7 @@
                 </ul>
             </div>
 
-            <div class="p-6 border border-gray-700 rounded-lg bg-white/5 backdrop-blur-sm">
+            <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
                 <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-2">
                     Tracks and Contest Options
                 </h3>

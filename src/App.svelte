@@ -5,6 +5,7 @@
   import ISDC2026 from "./components/sections/ISDC2026.svelte";
   import Program from "./components/sections/Program.svelte";
   import Outcomes from "./components/sections/Outcomes.svelte";
+  import Assessment from "./components/sections/Assessment.svelte";
   import Impact from "./components/sections/Impact.svelte";
   import WhyPartner from "./components/sections/WhyPartner.svelte";
   import Parents from "./components/sections/Parents.svelte";
@@ -14,7 +15,6 @@
   let showScrollToTop = false;
 
   function handleScroll() {
-    // Show button after scrolling past hero section (approximately 100vh)
     showScrollToTop = window.scrollY > window.innerHeight;
   }
 
@@ -33,18 +33,53 @@
   });
 </script>
 
-<div class="font-montserrat bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white min-h-screen">
+<div class="font-montserrat text-white min-h-screen relative">
+  <!-- Global flowing background -->
+  <div class="fixed inset-0 bg-black -z-10">
+    <!-- Flowing gradient overlay -->
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-900/50 via-transparent to-gray-900/50"></div>
+    
+    <!-- Animated glowing orbs -->
+    <div class="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-astraYellow opacity-[0.08] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute top-[30%] left-[5%] w-[450px] h-[450px] bg-purple-500 opacity-[0.08] rounded-full blur-3xl animate-float-slower"></div>
+    <div class="absolute top-[50%] right-[15%] w-[400px] h-[400px] bg-blue-500 opacity-[0.08] rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute top-[70%] left-[10%] w-[350px] h-[350px] bg-cyan-500 opacity-[0.08] rounded-full blur-3xl animate-float-slower"></div>
+    <div class="absolute top-[85%] right-[20%] w-[450px] h-[450px] bg-green-500 opacity-[0.08] rounded-full blur-3xl animate-float-slow"></div>
+    
+    <!-- Scattered stars throughout -->
+    <div class="absolute top-[5%] left-[15%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[8%] right-[25%] w-1 h-1 bg-blue-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    <div class="absolute top-[12%] left-[45%] w-1 h-1 bg-astraYellow rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[18%] right-[35%] w-1 h-1 bg-purple-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    
+    <div class="absolute top-[25%] left-[25%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[28%] right-[45%] w-1 h-1 bg-cyan-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    <div class="absolute top-[35%] left-[60%] w-1 h-1 bg-blue-300 rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[38%] right-[15%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle-delayed"></div>
+    
+    <div class="absolute top-[45%] left-[35%] w-1 h-1 bg-astraYellow rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[48%] right-[55%] w-1 h-1 bg-purple-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    <div class="absolute top-[52%] left-[70%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[58%] right-[25%] w-1 h-1 bg-cyan-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    
+    <div class="absolute top-[65%] left-[20%] w-1 h-1 bg-blue-300 rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[68%] right-[40%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle-delayed"></div>
+    <div class="absolute top-[72%] left-[55%] w-1 h-1 bg-astraYellow rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[78%] right-[60%] w-1 h-1 bg-purple-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    
+    <div class="absolute top-[82%] left-[40%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[88%] right-[30%] w-1 h-1 bg-cyan-300 rounded-full opacity-60 animate-twinkle-delayed"></div>
+    <div class="absolute top-[92%] left-[65%] w-1 h-1 bg-blue-300 rounded-full opacity-60 animate-twinkle"></div>
+    <div class="absolute top-[95%] right-[50%] w-1 h-1 bg-white rounded-full opacity-60 animate-twinkle-delayed"></div>
+  </div>
+
   <Navbar />
 
-  <main class="pt-20">
+  <main class="pt-20 relative">
     <Hero />
 
     <!-- About ASTRA / TDG -->
-    <section id="About" class="relative py-24 px-6 md:px-16 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
-      <!-- Background decoration -->
-      <div class="absolute top-10 right-10 w-64 h-64 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
-      <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-500 opacity-5 rounded-full blur-3xl"></div>
-      
+    <section id="About" class="relative py-24 px-6 md:px-16 text-white overflow-hidden">
       <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         <!-- LEFT: Text -->
         <div class="md:w-1/2 order-2 md:order-1">
@@ -107,6 +142,7 @@
     <ISDC2026 />
     <Program />
     <Outcomes />
+    <Assessment />
     <Impact />
     <WhyPartner />
     <Parents />
@@ -128,3 +164,61 @@
     </button>
   {/if}
 </div>
+
+<style>
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(20px, 20px);
+    }
+  }
+
+  @keyframes float-slower {
+    0%, 100% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-20px, 20px);
+    }
+  }
+
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.2);
+    }
+  }
+
+  @keyframes twinkle-delayed {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.9;
+      transform: scale(1.3);
+    }
+  }
+
+  .animate-float-slow {
+    animation: float-slow 20s ease-in-out infinite;
+  }
+
+  .animate-float-slower {
+    animation: float-slower 25s ease-in-out infinite;
+  }
+
+  .animate-twinkle {
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  .animate-twinkle-delayed {
+    animation: twinkle-delayed 4s ease-in-out infinite;
+  }
+</style>

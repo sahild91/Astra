@@ -2,11 +2,7 @@
   export let id: string = "WhyPartner";
 </script>
 
-<section {id} class="relative py-24 px-6 md:px-16 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
-  <!-- Background decoration -->
-  <div class="absolute top-10 right-10 w-96 h-96 bg-purple-500 opacity-5 rounded-full blur-3xl"></div>
-  <div class="absolute bottom-10 left-10 w-72 h-72 bg-blue-500 opacity-5 rounded-full blur-3xl"></div>
-
+<section {id} class="relative py-24 px-6 md:px-16 text-white overflow-hidden">
   <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
     <!-- Left: Content -->
     <div class="md:w-3/5 order-1">
@@ -50,11 +46,11 @@
 
     <!-- Right: Visual Element -->
     <div class="md:w-2/5 order-2 flex items-center justify-center">
-      <div class="w-full max-w-xs aspect-square rounded-full bg-gradient-to-br from-astraYellow/10 to-purple-500/10 border border-astraYellow/20 flex items-center justify-center backdrop-blur-sm">
+      <div class="w-full max-w-xs aspect-square rounded-full bg-astraYellow/15 border-2 border-astraYellow/40 flex items-center justify-center backdrop-blur-sm hover:bg-astraYellow/20 transition-colors">
         <div class="text-center p-8">
-          <div class="text-5xl font-poppins font-bold text-astraYellow mb-2">30K+</div>
-          <div class="text-gray-300 font-montserrat text-sm">Student Journeys</div>
-          <div class="text-gray-400 font-montserrat text-xs mt-2">Since 2016</div>
+          <div class="text-5xl font-poppins font-bold text-white mb-2">30K+</div>
+          <div class="text-gray-200 font-montserrat text-sm">Student Journeys</div>
+          <div class="text-gray-300 font-montserrat text-xs mt-2">Since 2016</div>
         </div>
       </div>
     </div>
