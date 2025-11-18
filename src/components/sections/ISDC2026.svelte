@@ -30,4 +30,18 @@
       </div>
     </div>
   </div>
+  <div class="absolute top-40 left-10 w-12 h-12 border-4 border-astraYellow rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute top-30 right-20 w-16 h-16 border-4 border-cosmicPurple rounded-full opacity-30 animate-float-slower"></div>
+  <div class="absolute bottom-22 left-1/4 w-10 h-10 border-4 border-skyBlue rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute bottom-45 right-1/3 w-14 h-14 border-4 border-starPink rounded-full opacity-30 animate-float-slower"></div>
 </section>
+
+<style>
+  :global(.animate-float-slow) {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  :global(.animate-float-slower) {
+    animation: float 8s ease-in-out infinite;
+  }
+</style>

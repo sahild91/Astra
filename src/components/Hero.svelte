@@ -30,14 +30,14 @@
     <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
       <button
         on:click={scrollToContact}
-        class="{isDarkMode ? 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white' : 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white'} px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+        class="{isDarkMode ? 'bg-gray-200 text-astraBlack border-2 border-astraYellow hover:bg-astraYellow hover:text-white' : 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white'} px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
       >
         Invite ASTRA to Your School
       </button>
 
       <button
         on:click={downloadBrochure}
-        class="{isDarkMode ? 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white' : 'bg-white text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white'} px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+        class="{isDarkMode ? 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white' : 'bg-gray-100 text-astraBlack border-2 border-astraYellow hover:bg-astraYellow hover:text-white'} px-8 py-4 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
       >
         Download Brochure
       </button>

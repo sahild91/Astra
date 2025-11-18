@@ -44,7 +44,7 @@
 
     <div class="grid md:grid-cols-2 gap-8">
       {#each phases as phase, i}
-        <div class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur rounded-2xl shadow-xl p-8 border-2 border-transparent hover:border-astraYellow transition-all duration-300 hover:shadow-2xl hover:scale-105">
+        <div class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur rounded-2xl shadow-xl p-8 border-2 border-cosmicPurple/30 hover:border-astraYellow transition-all duration-300 hover:shadow-2xl hover:scale-105">
           <div class="flex items-center gap-4 mb-4">
             <div class="w-12 h-12 rounded-full bg-gradient-to-br from-astraYellow to-yellow-400 flex items-center justify-center text-white font-bold text-xl shadow-lg">
               {i + 1}

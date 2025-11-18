@@ -54,7 +54,7 @@
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {#each reasons as reason}
-        <div class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur rounded-2xl shadow-lg p-8 border-2 border-transparent hover:border-astraYellow transition-all duration-300 hover:shadow-2xl hover:scale-105">
+        <div class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur rounded-2xl shadow-lg p-8 border-2 border-starPink/30 hover:border-astraYellow transition-all duration-300 hover:shadow-2xl hover:scale-105">
           <!-- <div class="text-5xl mb-4 text-center">{reason.icon}</div> -->
           <h3 class="text-xl font-poppins font-bold {isDarkMode ? 'text-gray-100' : 'text-gray-900'} mb-3 text-center">
             {reason.title}

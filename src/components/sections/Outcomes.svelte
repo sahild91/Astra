@@ -164,6 +164,10 @@
       </div>
     </div>
   </div>
+  <div class="absolute top-14 left-10 w-12 h-12 border-4 border-astraYellow rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute top-48 right-1/4 w-16 h-16 border-4 border-cosmicPurple rounded-full opacity-30 animate-float-slower"></div>
+  <div class="absolute bottom-20 left-1/6 w-10 h-10 border-4 border-skyBlue rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute bottom-56 right-16 w-14 h-14 border-4 border-starPink rounded-full opacity-30 animate-float-slower"></div>
 </section>
 
 <style>
@@ -180,5 +184,12 @@
 
   .animate-fadeIn {
     animation: fadeIn 0.5s ease-out;
+  }
+  :global(.animate-float-slow) {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  :global(.animate-float-slower) {
+    animation: float 8s ease-in-out infinite;
   }
 </style>
