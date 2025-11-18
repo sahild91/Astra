@@ -10,6 +10,7 @@
     { label: "ISDC 2026", targetId: "ISDC2026" },
     { label: "Program", targetId: "Program" },
     { label: "Outcomes", targetId: "Outcomes" },
+    { label: "Assessment", targetId: "Assessment" },
     { label: "Impact", targetId: "Impact" },
     { label: "Why Partner", targetId: "WhyPartner" },
     { label: "Parents", targetId: "Parents" },
