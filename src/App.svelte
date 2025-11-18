@@ -14,20 +14,22 @@
   import Section from "./components/Section.svelte";
 </script>
 
-<div class="font-montserrat bg-astraBlack text-white min-h-screen">
+<div class="font-montserrat bg-gradient-to-b from-gray-900 via-black to-gray-900 text-white min-h-screen">
   <Navbar />
 
   <main class="pt-20">
     <Hero />
 
     <!-- About ASTRA / TDG -->
-    <section id="About" class="py-24 px-6 md:px-16 bg-black text-white">
-      <div class="flex flex-col md:flex-row items-start justify-between gap-2">
+    <section id="About" class="relative py-24 px-6 md:px-16 bg-gradient-to-br from-gray-900 to-black text-white overflow-hidden">
+      <!-- Background decoration -->
+      <div class="absolute top-10 right-10 w-64 h-64 bg-astraYellow opacity-5 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-500 opacity-5 rounded-full blur-3xl"></div>
+      
+      <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
         <!-- LEFT: Text -->
-        <div class="max-w-6xl">
-          <h2
-            class="text-4xl md:text-5xl font-poppins font-bold text-astraYellow mb-6"
-          >
+        <div class="md:w-1/2 order-2 md:order-1">
+          <h2 class="text-4xl md:text-5xl font-poppins font-bold text-astraYellow mb-6">
             About ASTRA EDU LLP and Travel De Gama
           </h2>
 
@@ -56,9 +58,7 @@
         </div>
 
         <!-- RIGHT: Spaceman -->
-        <div
-          class="flex-shrink-0 flex justify-center md:justify-end w-full md:w-auto"
-        >
+        <div class="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
           <img
             src="/spaceman-no-bg.png"
             alt="ASTRA Mascot"
