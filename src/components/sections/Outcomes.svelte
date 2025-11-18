@@ -97,7 +97,7 @@
 
 <section {id} class="relative py-16 md:py-24 px-6 md:px-16 overflow-hidden">
   <div class="relative max-w-6xl mx-auto">
-    <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-astraYellow mb-6 text-center md:text-left">
+    <h2 class="text-3xl md:text-4xl font-poppins font-semibold {isDarkMode ? 'text-astraYellow' : 'text-astraBlack'} mb-6 text-center md:text-left">
       Learning Outcomes
     </h2>
 
@@ -109,10 +109,10 @@
     <div class="flex flex-col md:flex-row items-start gap-8 md:gap-12">
       <!-- Mobile: Details first, Desktop: Competencies first -->
       <div class="w-full md:w-2/5 order-1">
-        <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-4">
+        <h3 class="font-poppins font-semibold text-xl {isDarkMode ? 'text-astraYellow' : 'text-astraBlack'} mb-4">
           Competencies Tracked
         </h3>
-        <p class="font-montserrat {isDarkMode ? 'text-gray-400' : 'text-gray-600'} text-sm mb-6">
+        <p class="font-montserrat {isDarkMode ? 'text-gray-200' : 'text-gray-900'} text-sm mb-6">
           Hover on each competency to learn more
         </p>
         <div class="grid gap-4 text-sm font-montserrat">

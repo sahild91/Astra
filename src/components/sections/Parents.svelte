@@ -74,7 +74,7 @@
             </button>
             
             {#if openIndex === index}
-              <div class="px-6 pb-6 {isDarkMode ? 'bg-gray-700' : 'bg-gray-50'}">
+              <div class="px-6 pb-6 {isDarkMode ? 'bg-gray-800 hover:bg-gray-700' : 'bg-white hover:bg-gray-50'}">
                 <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} font-montserrat leading-relaxed">
                   {faq.answer}
                 </p>

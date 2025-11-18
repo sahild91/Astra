@@ -112,7 +112,7 @@
          style="background: #5b24e5;"></div>
     
     <!-- Blue splotches -->
-    <div class="absolute top-[18%] right-[3%] w-[720px] h-[720px] rounded-full blur-3xl opacity-35" 
+    <div class="absolute top-[18%] right-[3%] w-[720px] h-[720px] rounded-full blur-3xl opacity-23" 
          style="background: #4fb4e3;"></div>
     <div class="absolute top-[82%] left-[15%] w-[640px] h-[640px] rounded-full blur-3xl opacity-30" 
          style="background: #4fb4e3;"></div>
@@ -124,13 +124,13 @@
          style="background: #f72d3e;"></div>
     
     <!-- Green splotches -->
-    <div class="absolute top-[42%] right-[12%] w-[680px] h-[680px] rounded-full blur-3xl opacity-35" 
+    <div class="absolute top-[42%] right-[12%] w-[680px] h-[680px] rounded-full blur-3xl opacity-25" 
          style="background: #55e794;"></div>
     <div class="absolute top-[88%] left-[25%] w-[560px] h-[560px] rounded-full blur-3xl opacity-30" 
          style="background: #55e794;"></div>
     
     <!-- Orange splotches -->
-    <div class="absolute top-[55%] left-[35%] w-[560px] h-[560px] rounded-full blur-3xl opacity-35" 
+    <div class="absolute top-[55%] left-[35%] w-[560px] h-[560px] rounded-full blur-3xl opacity-25" 
          style="background: #f7812e;"></div>
     <div class="absolute top-[22%] right-[28%] w-[520px] h-[520px] rounded-full blur-3xl opacity-28" 
          style="background: #f7812e;"></div>
@@ -149,36 +149,38 @@
     <!-- About ASTRA / TDG -->
     <section id="About" class="relative py-24 px-6 md:px-16 overflow-hidden">
       <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-        <div class="md:w-1/2 order-2 md:order-1">
-          <h2 class="text-4xl md:text-5xl font-poppins font-bold text-astraYellow mb-6">
-            About ASTRA EDU LLP and Travel De Gama
-          </h2>
+        <div class="md:w-2/3 order-2 md:order-1">
+          <div class="{isDarkMode ? 'bg-gray-800/80' : 'bg-white/80'} backdrop-blur rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-astraYellow/30">
+            <h2 class="text-4xl md:text-5xl font-poppins font-bold text-astraYellow mb-6 ">
+              About ASTRA EDU LLP and Travel De Gama
+            </h2>
 
-          <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat mb-4">
-            ASTRA EDU LLP is the education and innovation vertical under Travel
-            De Gama that curates research-driven global learning experiences in
-            space science and technology. Since 2016 our core team has mentored
-            Indian school students for international space contests, helping
-            them transform early ideas into award-winning submissions reviewed
-            by expert juries.
-          </p>
+            <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat mb-4">
+              ASTRA EDU LLP is the education and innovation vertical under Travel
+              De Gama that curates research-driven global learning experiences in
+              space science and technology. Since 2016 our core team has mentored
+              Indian school students for international space contests, helping
+              them transform early ideas into award-winning submissions reviewed
+              by expert juries.
+            </p>
 
-          <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat mb-4">
-            The ISDC 2026 Training Program is a 50-hour, 20-module journey
-            aligned with NEP 2020, IB ATL skills, and contemporary innovation
-            frameworks. The curriculum blends scientific thinking, collaborative
-            research, and impactful storytelling, measured through structures
-            like Marzano and SOLO taxonomy.
-          </p>
+            <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat mb-4">
+              The ISDC 2026 Training Program is a 50-hour, 20-module journey
+              aligned with NEP 2020, IB ATL skills, and contemporary innovation
+              frameworks. The curriculum blends scientific thinking, collaborative
+              research, and impactful storytelling, measured through structures
+              like Marzano and SOLO taxonomy.
+            </p>
 
-          <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat">
-            Over 30,000 student journeys have been shaped through these
-            initiatives, with teams earning recognition on NASA-linked platforms
-            and ISDC, bringing global visibility to their schools.
-          </p>
+            <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat">
+              Over 30,000 student journeys have been shaped through these
+              initiatives, with teams earning recognition on NASA-linked platforms
+              and ISDC, bringing global visibility to their schools.
+            </p>
+          </div>
         </div>
 
-        <div class="md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
+        <div class="md:w-1/3 flex justify-center md:justify-end order-1 md:order-2">
           <img
             src="/spaceman-no-bg.png"
             alt="ASTRA Mascot"

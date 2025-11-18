@@ -34,11 +34,11 @@
 
 <section {id} class="relative py-24 px-6 md:px-16">
   <div class="max-w-6xl mx-auto relative">
-    <h2 class="text-4xl md:text-5xl font-poppins font-bold text-center text-astraYellow mb-6">
+    <h2 class="text-4xl md:text-5xl font-poppins font-bold text-center {isDarkMode ? 'text-white' : 'text-astraBlack'} mb-6">
       Program Structure
     </h2>
 
-    <p class="text-center {isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-lg font-montserrat mb-12 max-w-3xl mx-auto">
+    <p class="text-center {isDarkMode ? 'text-gray-100' : 'text-gray-700'} text-lg font-montserrat mb-12 max-w-3xl mx-auto">
       Our 50-hour, 20-module training journey is structured across four progressive phases, each building essential skills and knowledge for ISDC success.
     </p>
 
