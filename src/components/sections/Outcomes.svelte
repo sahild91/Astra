@@ -1,5 +1,6 @@
 <script lang="ts">
   export let id: string = "Outcomes";
+  export let isDarkMode = false;
 
   type Competency = {
     name: string;
@@ -94,13 +95,13 @@
   });
 </script>
 
-<section {id} class="relative py-16 md:py-24 px-6 md:px-16 text-white overflow-hidden">
+<section {id} class="relative py-16 md:py-24 px-6 md:px-16 overflow-hidden">
   <div class="relative max-w-6xl mx-auto">
     <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-astraYellow mb-6 text-center md:text-left">
       Learning Outcomes
     </h2>
 
-    <p class="text-gray-300 font-montserrat mb-8 md:mb-12 text-center md:text-left max-w-3xl">
+    <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} font-montserrat mb-8 md:mb-12 text-center md:text-left max-w-3xl">
       The curriculum is designed to strengthen both disciplinary understanding and 21st-century competencies.
       Growth is mapped using research-based frameworks such as Marzano and SOLO taxonomy.
     </p>
@@ -111,7 +112,7 @@
         <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-4">
           Competencies Tracked
         </h3>
-        <p class="font-montserrat text-gray-400 text-sm mb-6">
+        <p class="font-montserrat {isDarkMode ? 'text-gray-400' : 'text-gray-600'} text-sm mb-6">
           Hover on each competency to learn more
         </p>
         <div class="grid gap-4 text-sm font-montserrat">
@@ -124,10 +125,10 @@
               on:focus={() => handleHover(index)}
               on:blur={handleLeave}
               on:keydown={(e) => e.key === 'Enter' && handleHover(index)}
-              class="bg-white/5 border rounded-lg p-4 backdrop-blur-sm transition-all duration-500 cursor-pointer
-                {selectedIndex === index ? 'border-astraYellow bg-astraYellow/10 scale-105' : 'border-gray-800 hover:border-gray-700'}"
+              class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur border rounded-lg p-4 transition-all duration-500 cursor-pointer shadow-md
+                {selectedIndex === index ? 'border-astraYellow bg-astraYellow/10 scale-105 shadow-lg' : `${isDarkMode ? 'border-gray-700' : 'border-gray-300'} hover:border-astraYellow/50 hover:shadow-lg`}"
             >
-              <span class={selectedIndex === index ? 'text-astraYellow font-semibold' : 'text-gray-300'}>
+              <span class={selectedIndex === index ? 'text-astraYellow font-semibold' : `${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 {competency.name}
               </span>
             </div>
@@ -137,19 +138,19 @@
 
       <!-- Competency Details -->
       <div class="w-full md:w-3/5 order-2">
-        <div class="relative bg-gradient-to-br from-gray-800 via-gray-900 to-black border-2 border-astraYellow rounded-lg p-6 md:p-8 backdrop-blur-sm min-h-[350px] md:min-h-[400px] overflow-hidden">
+        <div class="relative {isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur border-2 border-astraYellow rounded-lg p-6 md:p-8 min-h-[350px] md:min-h-[400px] overflow-hidden shadow-xl">
           {#key selectedIndex}
             <div class="animate-fadeIn relative z-10">
               <h3 class="font-poppins font-semibold text-xl md:text-2xl text-astraYellow mb-3 md:mb-4">
                 {selectedCompetency.name}
               </h3>
-              <p class="font-montserrat text-white mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
+              <p class="font-montserrat {isDarkMode ? 'text-gray-300' : 'text-gray-800'} mb-4 md:mb-6 leading-relaxed text-sm md:text-base">
                 {selectedCompetency.description}
               </p>
-              <h4 class="font-poppins font-semibold text-base md:text-lg text-astraYellow mb-3">
+              <h4 class="font-poppins font-semibold text-base md:text-lg text-cosmicPurple mb-3">
                 Key Skills
               </h4>
-              <ul class="space-y-2 md:space-y-3 font-montserrat text-white text-xs md:text-sm">
+              <ul class="space-y-2 md:space-y-3 font-montserrat {isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-xs md:text-sm">
                 {#each selectedCompetency.details as detail}
                   <li class="flex items-start gap-3">
                     <span class="text-astraYellow mt-1 font-bold">✓</span>

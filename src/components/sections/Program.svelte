@@ -1,92 +1,97 @@
 <script lang="ts">
-    export let id: string = "Program";
+  export let id: string = "Program";
+  export let isDarkMode = false;
+
+  type Phase = {
+    title: string;
+    modules: string[];
+    description: string;
+  };
+
+  const phases: Phase[] = [
+    {
+      title: "Phase 1: Foundation & Exploration",
+      modules: ["Module 1-5"],
+      description: "Introduction to space science fundamentals, ISDC requirements, research methodology, and team formation. Students explore core concepts and begin identifying their settlement focus area."
+    },
+    {
+      title: "Phase 2: Research & Development",
+      modules: ["Module 6-12"],
+      description: "Deep dive into technical domains: orbital mechanics, life support systems, structural engineering, economics, and governance. Teams conduct literature reviews and develop initial design concepts."
+    },
+    {
+      title: "Phase 3: Integration & Refinement",
+      modules: ["Module 13-17"],
+      description: "Synthesize research into cohesive settlement design. Focus on systems integration, trade-off analysis, risk assessment, and ensuring all technical components work together seamlessly."
+    },
+    {
+      title: "Phase 4: Communication & Submission",
+      modules: ["Module 18-20"],
+      description: "Professional report writing, visual presentation design, peer review sessions, and final submission preparation. Teams practice defending their proposals and refining their communication."
+    }
+  ];
 </script>
 
-<section {id} class="relative py-24 px-6 md:px-16 text-white overflow-hidden">
-    <div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-start gap-12">
-        <!-- Left: Content -->
-        <div class="md:w-3/5 order-1">
-            <h2 class="text-3xl md:text-4xl font-poppins font-semibold text-astraYellow mb-6">
-                Program Overview
-            </h2>
+<section {id} class="relative py-24 px-6 md:px-16">
+  <div class="max-w-6xl mx-auto relative">
+    <h2 class="text-4xl md:text-5xl font-poppins font-bold text-center text-astraYellow mb-6">
+      Program Structure
+    </h2>
 
-            <p class="text-gray-300 font-montserrat mb-8">
-                The ASTRA Space Innovation Program is an intensive 50-hour,
-                20-module journey that blends space science, creativity, and
-                structured research. Students progress from topic exploration to a
-                complete space settlement report and presentation aligned with the
-                NSS Gerard K. O'Neill Space Settlement Contest guidelines.
-            </p>
+    <p class="text-center {isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-lg font-montserrat mb-12 max-w-3xl mx-auto">
+      Our 50-hour, 20-module training journey is structured across four progressive phases, each building essential skills and knowledge for ISDC success.
+    </p>
 
-            <div class="grid md:grid-cols-2 gap-6 mb-10">
-                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                    <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
-                        Phase 1
-                    </h3>
-                    <p class="font-montserrat text-sm text-gray-300">
-                        Orientation and topic finalisation. Students understand
-                        contest expectations, explore themes, and select a focus
-                        area for their project.
-                    </p>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                    <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
-                        Phase 2
-                    </h3>
-                    <p class="font-montserrat text-sm text-gray-300">
-                        Research and mentorship. Guided sessions on literature
-                        review, systems thinking, and data collection, with regular
-                        mentor feedback.
-                    </p>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                    <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
-                        Phase 3
-                    </h3>
-                    <p class="font-montserrat text-sm text-gray-300">
-                        Project development. Teams build the technical narrative,
-                        diagrams, and models, and connect scientific choices to
-                        human factors.
-                    </p>
-                </div>
-                <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                    <h3 class="font-poppins font-semibold text-lg text-astraYellow mb-1">
-                        Phase 4 &amp; 5
-                    </h3>
-                    <p class="font-montserrat text-sm text-gray-300">
-                        Final submission to NSS and preparation for ISDC. Includes
-                        editing, mock judging, and presentation coaching for
-                        selected teams travelling to the USA.
-                    </p>
-                </div>
+    <div class="grid md:grid-cols-2 gap-8">
+      {#each phases as phase, i}
+        <div class="{isDarkMode ? 'bg-gray-800/90' : 'bg-white/90'} backdrop-blur rounded-2xl shadow-xl p-8 border-2 border-transparent hover:border-astraYellow transition-all duration-300 hover:shadow-2xl hover:scale-105">
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-astraYellow to-yellow-400 flex items-center justify-center text-white font-bold text-xl shadow-lg">
+              {i + 1}
             </div>
+            <h3 class="text-2xl font-poppins font-bold {isDarkMode ? 'text-gray-100' : 'text-gray-900'}">
+              {phase.title}
+            </h3>
+          </div>
+
+          <div class="mb-4">
+            <span class="inline-block bg-cosmicPurple/20 text-cosmicPurple px-4 py-1 rounded-full text-sm font-semibold">
+              {phase.modules[0]}
+            </span>
+          </div>
+
+          <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} leading-relaxed font-montserrat">
+            {phase.description}
+          </p>
         </div>
-
-        <!-- Right: Additional Info -->
-        <div class="md:w-2/5 order-2 space-y-6">
-            <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-2">
-                    Student Kit and Support
-                </h3>
-                <ul class="list-disc list-inside font-montserrat text-sm text-gray-300 space-y-1">
-                    <li>On-boarding kit with report formats, templates, and rubrics.</li>
-                    <li>Hybrid live sessions with interim tasks and reflections.</li>
-                    <li>Mentor access for doubt-clearing and review.</li>
-                    <li>Mock presentations with structured feedback.</li>
-                </ul>
-            </div>
-
-            <div class="p-6 border border-gray-800 rounded-lg bg-white/5 backdrop-blur-sm hover:border-astraYellow/30 transition-colors">
-                <h3 class="font-poppins font-semibold text-xl text-astraYellow mb-2">
-                    Tracks and Contest Options
-                </h3>
-                <p class="font-montserrat text-sm text-gray-300">
-                    Students can opt for poster or oral presentation tracks.
-                    Within each track the program scaffolds them through
-                    ideation, evidence gathering, design, and narrative building
-                    so that final submissions match international expectations.
-                </p>
-            </div>
-        </div>
+      {/each}
     </div>
+
+    <div class="mt-16 {isDarkMode ? 'bg-gray-800/80' : 'bg-white/80'} backdrop-blur rounded-3xl p-8 md:p-12 border-2 border-astraYellow/30 shadow-xl">
+      <h3 class="text-2xl md:text-3xl font-poppins font-bold {isDarkMode ? 'text-gray-100' : 'text-gray-900'} mb-6 text-center">
+        Program Highlights
+      </h3>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="text-center">
+          <div class="text-4xl font-bold text-astraYellow mb-2">50</div>
+          <div class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} font-montserrat">Total Hours</div>
+        </div>
+
+        <div class="text-center">
+          <div class="text-4xl font-bold text-cosmicPurple mb-2">20</div>
+          <div class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} font-montserrat">Structured Modules</div>
+        </div>
+
+        <div class="text-center">
+          <div class="text-4xl font-bold text-skyBlue mb-2">4</div>
+          <div class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} font-montserrat">Learning Phases</div>
+        </div>
+      </div>
+
+      <p class="{isDarkMode ? 'text-gray-300' : 'text-gray-700'} text-center font-montserrat mt-8 text-lg">
+        Aligned with <strong class="text-astraYellow">NEP 2020</strong>, <strong class="text-cosmicPurple">IB ATL Skills</strong>, and contemporary innovation frameworks.
+      </p>
+    </div>
+  </div>
 </section>

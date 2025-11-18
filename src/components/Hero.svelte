@@ -1,60 +1,62 @@
 <script lang="ts">
+    export let id: string = "Home";
+    export let isDarkMode = false;
+
+    function downloadBrochure() {
+        const link = document.createElement("a");
+        link.href = "/ASTRA ISDC Brochure.pdf";
+        link.download = "ASTRA_ISDC_Brochure.pdf";
+        link.click();
+    }
+
     function scrollToContact() {
         const contactSection = document.getElementById('Contact');
         if (contactSection) {
-            contactSection.scrollIntoView({ behavior: 'smooth' });
+        contactSection.scrollIntoView({ behavior: 'smooth' });
         }
     }
 </script>
 
-<div class="starfield min-h-screen flex items-center relative overflow-hidden">
-    <!-- Additional cosmic elements -->
-    <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-    <div class="absolute top-1/3 right-1/3 w-1 h-1 bg-astraYellow rounded-full animate-pulse delay-1"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-2"></div>
-    
-    <section id="Home" class="w-full py-24 relative z-10">
-        <div
-            class="w-full px-4 md:px-12 lg:px-24 xl:px-40 2xl:px-56 flex flex-col items-center text-center"
-        >
-            <h1
-                class="text-4xl md:text-6xl font-poppins font-semibold mb-6 text-astraYellow drop-shadow-lg"
-            >
-                ASTRA Space Innovation Program for ISDC 2026
-            </h1>
+<section {id} class="min-h-screen flex items-center justify-center px-6 relative overflow-hidden">
+  <div class="w-full px-4 md:px-12 lg:px-24 xl:px-40 2xl:px-56 flex flex-col items-center text-center">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-poppins font-bold text-astraYellow mb-6 leading-tight">
+      ASTRA Space Innovation Program for ISDC 2026
+    </h1>
 
-            <p
-                class="text-gray-200 font-montserrat max-w-3xl md:max-w-4xl mb-10"
-            >
-                A world-class mentorship journey that guides school students
-                from early curiosity to research-based, competition-ready space
-                settlement proposals presented on a global ISDC stage.
-            </p>
+    <p class="{isDarkMode ? 'text-white' : 'text-gray-700'} text-lg md:text-xl mb-8 leading-relaxed font-montserrat font-medium">
+      Join ASTRA EDU LLP's comprehensive 50-hour training program designed to guide students toward success at ISDC 2026, the world's premier space settlement design competition.
+    </p>
 
-            <div class="flex flex-wrap gap-4 justify-center">
-                <button
-                    on:click={scrollToContact}
-                    class="bg-astraYellow text-astraBlack font-montserrat font-semibold px-6 py-3 rounded-md text-sm md:text-base hover:bg-yellow-500 transition"
-                >
-                    Invite ASTRA to Your School
-                </button>
-                <a
-                    href="/ASTRA ISDC Brochure.pdf"
-                    download="ASTRA ISDC Brochure.pdf"
-                    class="px-6 py-3 bg-transparent border border-astraYellow text-astraYellow rounded-lg font-montserrat hover:bg-astraYellow hover:text-black transition"
-                >
-                    Download Brochure
-                </a>
-            </div>
-        </div>
-    </section>
-</div>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+      <button
+        on:click={scrollToContact}
+        class="bg-astraYellow text-white px-8 py-4 rounded-full font-semibold hover:bg-yellow-500 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        Invite ASTRA to Your School
+      </button>
+
+      <button
+        on:click={downloadBrochure}
+        class="{isDarkMode ? 'bg-gray-700 text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white' : 'bg-white text-astraYellow border-2 border-astraYellow hover:bg-astraYellow hover:text-white'} px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+      >
+        Download Brochure
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating decorative elements -->
+  <div class="absolute top-20 left-10 w-12 h-12 border-4 border-astraYellow rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute top-40 right-20 w-16 h-16 border-4 border-cosmicPurple rounded-full opacity-30 animate-float-slower"></div>
+  <div class="absolute bottom-32 left-1/4 w-10 h-10 border-4 border-skyBlue rounded-full opacity-30 animate-float-slow"></div>
+  <div class="absolute bottom-20 right-1/3 w-14 h-14 border-4 border-starPink rounded-full opacity-30 animate-float-slower"></div>
+</section>
 
 <style>
-    .delay-1 {
-        animation-delay: 1s;
-    }
-    .delay-2 {
-        animation-delay: 2s;
-    }
+  :global(.animate-float-slow) {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  :global(.animate-float-slower) {
+    animation: float 8s ease-in-out infinite;
+  }
 </style>

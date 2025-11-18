@@ -1,4 +1,6 @@
 <script lang="ts">
+  export let isDarkMode = false;
+
   type NavLink = {
     label: string;
     targetId: string;
@@ -19,6 +21,8 @@
 
   let open = false;
 
+  $: logoSrc = isDarkMode ? "/logo.png" : "/logo-black.png";
+
   const toggle = () => {
     open = !open;
   };
@@ -28,26 +32,26 @@
   };
 </script>
 
-<nav class="fixed top-0 left-0 w-full bg-astraBlack/90 backdrop-blur text-white z-50 border-b border-gray-700 font-montserrat">
+<nav class="fixed top-0 left-0 w-full {isDarkMode ? 'bg-gray-800/95' : 'bg-white/95'} backdrop-blur z-50 border-b-4 border-astraYellow shadow-md font-montserrat transition-colors duration-300">
   <div class="max-w-full mx-auto flex justify-between items-center px-4">
     <div class="flex flex-col">
-      <img src="/logo.png" alt="ASTRA Logo" class="h-24 w-auto" />
+      <img src="{logoSrc}" alt="ASTRA Logo" class="h-24 w-auto" />
     </div>
 
     <button
-      class="md:hidden text-white"
+      class="md:hidden text-astraYellow"
       aria-label="Toggle navigation"
       on:click={toggle}
     >
       ☰
     </button>
 
-    <ul class="hidden md:flex gap-8 text-sm">
+    <ul class="hidden md:flex gap-8 text-sm font-semibold">
       {#each links as link}
         <li>
           <a
             href={`#${link.targetId}`}
-            class="hover:text-astraYellow transition-colors"
+            class="{isDarkMode ? 'text-gray-200 hover:text-astraYellow' : 'text-gray-800 hover:text-astraYellow'} transition-colors"
           >
             {link.label}
           </a>
@@ -57,12 +61,12 @@
   </div>
 
   {#if open}
-    <ul class="md:hidden bg-astraBlack border-t border-gray-800 px-4 pb-4 text-sm">
+    <ul class="md:hidden {isDarkMode ? 'bg-gray-800' : 'bg-white'} border-t-2 border-astraYellow px-4 pb-4 text-sm font-semibold">
       {#each links as link}
         <li class="py-2">
           <a
             href={`#${link.targetId}`}
-            class="block hover:text-astraYellow"
+            class="block {isDarkMode ? 'text-gray-200 hover:text-astraYellow' : 'text-gray-800 hover:text-astraYellow'} transition-colors"
             on:click={close}
           >
             {link.label}
